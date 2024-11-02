@@ -141,8 +141,8 @@ class PanaromaStitcher():
         
         # final panoramic dimensions
         final_img_dim = max_xy_coord - min_xy_coord
-        row = int(final_img_dim[1]*0.75)
-        column = int(final_img_dim[0]*1.6)
+        row = int(final_img_dim[1]*0.8)
+        column = int(final_img_dim[0]*1.4)
         pan_img = np.zeros((row, column, 3), dtype=np.uint8)
         # image canvas
         # pan_img = np.zeros((int(final_img_dim[1]), int(final_img_dim[0]), 3))
