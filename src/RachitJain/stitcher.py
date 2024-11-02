@@ -141,8 +141,8 @@ class PanaromaStitcher():
         
         # final panoramic dimensions
         final_img_dim = max_xy_coord - min_xy_coord
-        row = int(final_img_dim[1])
-        column = int(final_img_dim[0]*1.3)
+        row = int(final_img_dim[1]*0.75)
+        column = int(final_img_dim[0]*1.6)
         pan_img = np.zeros((row, column, 3), dtype=np.uint8)
         # image canvas
         # pan_img = np.zeros((int(final_img_dim[1]), int(final_img_dim[0]), 3))
@@ -159,8 +159,8 @@ class PanaromaStitcher():
         print('Found {} Images for stitching'.format(len(all_images)))
         
         # Convert image paths to OpenCV image objects
-        temp_images = [cv2.imread(img_path) for img_path in all_images]
-        images = [cv2.resize(img, None, fx=0.5, fy=0.5) for img in temp_images]
+        images = [cv2.imread(img_path) for img_path in all_images]
+        # images = [cv2.resize(img, None, fx=0.5, fy=0.5) for img in temp_images]
         
         # print('---images---')
         ####  Your Implementation here
